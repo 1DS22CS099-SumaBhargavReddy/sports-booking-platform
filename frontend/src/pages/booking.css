@@ -1,0 +1,231 @@
+/* 🌟 MAIN CONTAINER */
+.container {
+  padding: 25px;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #0055ff, #00e1ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 🌟 COURT GRID */
+.court-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 25px;
+}
+
+.court-card {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(14px);
+  transition: 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.court-card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82ff;
+  box-shadow: 0 10px 30px rgba(59, 130, 255, 0.45);
+}
+
+.court-card.selected {
+  border-color: #00db88;
+  background: linear-gradient(145deg, #5ad8aa, #121010);
+  box-shadow: 0 12px 32px rgba(0, 255, 135, 0.45);
+  animation: pulse 1.3s infinite ease-in-out;
+}
+
+/* 🌟 SLOT BUTTONS */
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.slot {
+  padding: 14px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 17px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 2px solid transparent;
+  backdrop-filter: blur(12px);
+  transition: 0.35s;
+}
+
+.slot:hover {
+  background: rgba(0, 119, 255, 0.15);
+  border-color: #007bff;
+  transform: scale(1.06);
+}
+
+.slot.selected {
+  background: #007bff;
+  color: black;
+  border-color: #007bff;
+  box-shadow: 0 10px 26px rgba(0, 123, 255, 0.55);
+  animation: glowSlot 1.2s infinite alternate;
+}
+
+/* 🌟 EQUIPMENT COUNTERS */
+.equipment {
+  margin-top: 25px;
+  display: flex;
+  gap: 50px;
+}
+
+.equip-item {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+}
+
+.controls button {
+  border: none;
+  background: linear-gradient(90deg, #007bff, #00e1ff);
+  color:black;
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px #00c8ff;
+}
+
+.controls span {
+  font-size: 22px;
+  font-weight: bold;
+  width: 28px;
+  text-align: center;
+}
+
+/* 🌟 COACH DROPDOWN */
+.coach-dropdown {
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 18px;
+  width: 260px;
+  border-radius: 12px;
+  border: 2px solid black;
+  transition: 0.4s;
+}
+
+.coach-dropdown:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 12px #00d4ff;
+}
+
+/* 🌟 PRICE BOX */
+.price-box {
+  margin-top: 30px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0,0,0,0.1);
+  backdrop-filter: blur(14px);
+  font-size: 17px;
+  width: 300px;
+  animation: slideUp 0.6s ease;
+}
+
+.total {
+  font-size: 22px;
+  font-weight: 800;
+  color: #007bff;
+}
+
+/* 🌟 CONFIRM BUTTON */
+.confirm-btn {
+  margin-top: 25px;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-size: 20px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00df7e, #00b6ff);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 26px rgba(0, 255, 163, 0.4);
+}
+
+.confirm-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 35px rgba(0, 255, 200, 0.6);
+}
+
+/* 🌟 SUCCESS MESSAGE */
+.confirmation {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 18px;
+  text-align: center;
+  color: #00b56f;
+  animation: fadeIn 0.6s ease, bounce 1s ease;
+}
+
+/* 🌟 ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 14px rgba(0, 255, 135, 0.35); }
+  100% { box-shadow: 0 0 28px rgba(0, 255, 135, 0.65); }
+}
+
+@keyframes glowSlot {
+  0% { box-shadow: 0 0 12px rgba(0, 123, 255, 0.4); }
+  100% { box-shadow: 0 0 28px rgba(0, 123, 255, 0.85); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.date-picker {
+  width: 250px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.date-picker:focus {
+  border-color: #2e7dff;
+  outline: none;
+}

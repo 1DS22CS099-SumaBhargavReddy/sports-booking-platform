@@ -1,0 +1,35 @@
+.calendar {
+  padding: 20px;
+  color: #000;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.slot {
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #ccc;
+}
+
+.available {
+  background-color: #c8ffc8;
+  border-color: green;
+}
+
+.booked {
+  background-color: #ffb3b3;
+  border-color: red;
+}
+
+.coach-tag {
+  display: block;
+  font-size: 12px;
+  color: #222;
+}

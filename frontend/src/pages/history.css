@@ -1,0 +1,94 @@
+.history-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.history-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1b3a57;
+}
+
+.history-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.history-card {
+  border-radius: 12px;
+  padding: 18px;
+  background: None;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Status highlight */
+.history-card.confirmed {
+  border-left: 6px solid #16a34a;
+}
+
+.history-card.waitlist {
+  border-left: 6px solid #eab308;
+}
+
+.history-card.cancelled {
+  border-left: 6px solid #dc2626;
+  opacity: 0.6;
+}
+
+/* Fade-out animation on cancel */
+.removed {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.cancel-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ef4444;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #c81e1e;
+}
+
+.toast {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #1b3a57;
+  color: black;
+  padding: 12px 22px;
+  border-radius: 8px;
+  animation: slideUp 0.4s ease;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+}
+
+/* Smooth FadeIn */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Toast Slide */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
