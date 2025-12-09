@@ -7,7 +7,7 @@ export default function BookingHistory() {
   const [toast, setToast] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/bookings").then(res => {
+    axios.get("https://sports-booking-platform-uh13.onrender.com/api/bookings").then(res => {
       setBookings(res.data);
     });
   }, []);
@@ -19,7 +19,7 @@ export default function BookingHistory() {
     document.getElementById(id).classList.add("removed");
 
     setTimeout(async () => {
-      await axios.patch(`http://localhost:5000/api/bookings/${id}/cancel`);
+      await axios.patch(`https://sports-booking-platform-uh13.onrender.com/api/bookings/${id}/cancel`);
 
       setBookings(bookings.filter((b) => b._id !== id));
       setToast("✔ Booking Cancelled Successfully");
