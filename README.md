@@ -15,7 +15,7 @@ A full-stack **badminton booking system** with:
 
 | Service | URL |
 |--------|-----|
-| **Frontend (Vercel)** | https://YOUR-VERCEL-URL.vercel.app |
+| **Frontend (Vercel)** | https://sports-booking-platform-rho.vercel.app/ |
 | **Backend (Render)** | https://sports-booking-platform-uh13.onrender.com |
 | **MongoDB Atlas** | Cloud-hosted database |
 
